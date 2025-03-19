@@ -19,13 +19,13 @@ if [ "$file_a" != "$file_b" ] && [ "${file_a_trimmed:0:6}" == "${file_b_trimmed:
 output_sam=$(echo "$file_a_trimmed" | sed 's/_R[12].*$//g').sam
 #unzips pairs
 if [[ "$file_a" == *.gz ]]; then
-#gunzip $file_a
+gunzip $file_a
 unzipped1=$(echo $file_b | sed 's/\.gz//g')
 else unzipped1=$file_a
 fi
 
 if [[ "$file_b" == *.gz ]]; then
-#gunzip $file_b
+gunzip $file_b
 unzipped2=$(echo $file_b | sed 's/\.gz//g')
 else unzipped2=$file_b
 fi
