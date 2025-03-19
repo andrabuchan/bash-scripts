@@ -20,7 +20,7 @@ output_sam=$(echo "$file_a_trimmed" | sed 's/_R[12].*$//g').sam
 #unzips pairs
 if [[ "$file_a" == *.gz ]]; then
 gunzip $file_a
-unzipped1=$(echo $file_b | sed 's/\.gz//g')
+unzipped1=$(echo $file_a | sed 's/\.gz//g')
 else unzipped1=$file_a
 fi
 
