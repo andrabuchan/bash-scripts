@@ -31,9 +31,9 @@ else unzipped2=$file_b
 fi
 
 #aligns paired ends to reference db specified in first argument
-echo "Aligning $file_a_trimmed to $file_b_trimmed\n"
+echo "Aligning $file_a_trimmed to $file_b_trimmed"
 bowtie2 -x $2 -1 $unzipped1 -2 $unzipped2 > $output_sam
-echo "Alignment complete! Saved to $output.sam\n"
+echo "Alignment complete! Saved to $output_sam"
 gzip $unzipped1 $unzipped2
 
 fi
